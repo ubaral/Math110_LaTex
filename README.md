@@ -1,1 +1,0 @@
-# Math110_LaTex
