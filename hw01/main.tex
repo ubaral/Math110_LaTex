@@ -35,7 +35,7 @@
     \textit{\underline{Problem:} Label the following statements as True or False}
     \begin{itemize}
         \item[(a)] \textit{Every vector space contains a zero vector.}\\[1ex]
-            \textbf{\boxed{TRUE.}} By the definition of the properties of vector sets, there must be a zero vector or else the set is not a vector set.\vspace{2ex}
+            \textbf{\boxed{TRUE.}} By the definition of the properties of vector spaces, there must be a zero vector or else the set is not a vector space.\vspace{2ex}
             
         \item[(b)] \textit{A vector space may have more than one zero vector.}\\[1ex]
             \textbf{\boxed{FALSE.}} By contradiction, Suppose there are multiple values for zero, $u$ and $u'$. $u + u' = u$ and $u' + u = u'$ therefore $u=u'$ and our assumption that there are more than one zero is false.\vspace{2ex}
@@ -117,26 +117,125 @@
 
         \hspace{20pt}For multiplication, we have that $(cf)(x) = c\cdot f(x)$. And again, we have that $(cf)\rq(x) = c\cdot f\rq (x)$ which means, by the same justification as above, that $(cf)(x) \in \vectSpace$ as well.\qed
 
-    \item [\textbf{13.}]
-    {\underline{Problem:} Let $\mathbf{V}$ denote the set of ordered pairs of real numbers. If $(a1,a2)$ and $(b1, b2)$ are elements of $\mathbf{V}$ and $c \in \mathbb{R}$, define $(a1, a2) + (b1,b2) = (a1 + b1, a2b2)$ and $c(a1,a2) = (ca1,a2)$. Is $\mathbf{V}$ a vector space over $\mathbb{R}$ with these operations? Justify your answer.}\\[2ex]\textit{\underline{Solution:}}\\
+    \item [\textbf{13.}]\textit{\underline{Problem:} Let $\mathbf{V}$ denote the set of ordered pairs of real numbers. If $(a1,a2)$ and $(b1, b2)$ are elements of $\mathbf{V}$ and $c \in \mathbb{R}$, define $(a1, a2) + (b1,b2) = (a1 + b1, a2b2)$ and $c(a1,a2) = (ca1,a2)$. Is $\mathbf{V}$ a vector space over $\mathbb{R}$ with these operations? Justify your answer.}\\[2ex]\textit{\underline{Solution:}}\\
     	No, it is not a vector space because \textbf{Axiom 3} and \textbf{Axiom 4} contradict each other. \textbf{Axiom 3} states that: $\exists\;\vec{0} \in \vectSpace : \forall \; \vec{v} \in \vectSpace \;(\vec{v} + \vec{0} = \vec{v})$ which implies that the $\vec{0} = (0, 1)$. \textbf{Axiom 4} states that: $\forall\vec{x} \in \vectSpace, \exists \vec{y} \in \vectSpace : (\vec{x}  + \vec{y}  = \vec{0}$). However, with the vector $\vec{u} = (0, 0)$, there is no other vector $\vec{u\rq} \in \vectSpace$ such that $\vec{u} + \vec{u\rq} = \vec{0}$, becuase such a vector would have to satisfy the equation $u\rq_2 \cdot 0 = 1$ where $u\rq_2 \in \mathbb{R}$
     
     \item [\textbf{17.}]
     \textit{\underline{Problem:} Let $V = \{(a_1,a_2): a_1,a_2 \in \mathbb{F}\}$, where $\mathbb{F}$ is a field. Define addition of elements of $\vectSpace$ coordinatewise, and for $c \in \mathbb{F}$ and $(a_1, a_2) \in \vectSpace$, define $c(a_1,a_2) = (a_1, 0).$ Is $\vectSpace$ a vector space over $\mathbb{F}$ with these operations? Justify your answer.}\\[2ex]\textit{\underline{Solution:}}\\
     	\boxed{NO}. Because the multiplication operation violates \textbf{Axiom 5}. Which is that $1\cdot x = x,\;\forall\;x\in\vectSpace$. Which would mean that $1\cdot(a1,a2) = (a1,a2), \;\forall \;a_1,a_2 \in \mathbb{F}$ But in fact  $1\cdot(a1,a2) \neq (a1,a2) \;\forall\; a_2 \neq 0$
 \end{itemize}
-
+\newpage
 \section*{1.3}
 \begin{itemize}
     \setlength\itemsep{5ex}
-    \item [\textbf{1.}]
-    	
-    \item [\textbf{3.}]
-    \item [\textbf{8.}]
-    \item [\textbf{12.}]
-    \item [\textbf{19.}]
-    \item [\textbf{25.}]
-    \item [\textbf{29.}]
+    \item [\textbf{1.}]\textit{\underline{Problem:} Label the following statements as true or false.}
+    	\begin{itemize}
+    		\item[(a)]\textit{If V is a vector space and W is a subset of V that is a vector space,
+			then W is a subspace of V.}\\[1ex]\boxed{FALSE }. Because the subset has to be closed under addition and scalar multiplication as well.
+
+    		\item[(b)] \textit{The empty set is a subspace of every vector space.}\\[1ex]\boxed{FALSE}. It needs a zero vector in the set, but there are no vectors in the set.
+
+    		\item[(c)] \textit{If V is a vector space other than the zero vector space, then V
+			contains a subspace W such that $W \neq V.$}\\[1ex]\boxed{TRUE}. The zero-vector space is a subspace itself.
+
+    		\item[(d)] \textit{The intersection of any two subsets of V is a subspace of V.}\\[1ex]\boxed{FALSE}. The zero vector may not neccesarily be in the intersection of two arbitrary subsets.
+
+    		\item[(e)] \textit{An $n \times n$ diagonal matrix can never have more than $n$ nonzero
+			entries.}\\[1ex]\boxed{TRUE}. A diagonal matrix is by definition the matrix with all zeroes except the diagonal which may or may not be zero, so it can have at most $n$ n nonzero entries.
+
+    		\item[(f)] \textit{The trace of a square matrix is the product of its diagonal entries.}\\[1ex]\boxed{FALSE}. It is the sum.
+
+    		\item[(g)] \textit{Let $W$ be the $xy-plane$ in $\mathbb{R}^3$ that is, $W = \{(a_1, a_2, 0): a_1, a_2 \in \mathbb{R}$\}. Then $W = \mathbb{R}^2$.}
+    		\\[1ex]\boxed{FALSE}. vectors in $W$ are $\mathbb{R}^3$ which is not comparable with vectors in $\mathbb{R}^2$
+    	\end{itemize}
+
+    \item [\textbf{3.}]\textit{\underline{Problem:} Prove that $(aA + bB)^t = aA^t + bB^t$ for any $A,B \in M_{m\times n}(F)$ and any $a,b \in F$}\\[2ex]\textit{\underline{Solution:}}\allowdisplaybreaks
+    	\begin{align*}
+    			&\mathbf{(aA + bB)^T =}\\
+	            &=\left(\begin{bmatrix}
+	                aA_{11} & aA_{12} & \hdots & aA_{1n}\\
+	                aA_{21} & aA_{22} & \hdots & aA_{2n}\\
+	                \vdots & \vdots &  & \vdots\\
+	                aA_{m1} & aA_{m2} & \hdots & aA_{mn}\\
+	                \nonumber
+	            \end{bmatrix} +
+	            \begin{bmatrix}
+	                bB_{11} & bB_{12} & \hdots & bB_{1n}\\
+	                bB_{21} & bB_{22} & \hdots & bB_{2n}\\
+	                \vdots & \vdots &  & \vdots\\
+	                bB_{m1} & bB_{m2} & \hdots & bB_{mn}\\
+	                \nonumber
+	            \end{bmatrix}\right)^T\\
+	            &=\begin{bmatrix}
+	                aA_{11} + bB_{11} & aA_{12} + bB_{12} & \hdots & aA_{1n} + bB_{1n}\\
+	                aA_{21} + bB_{21} & aA_{22} + bB_{22} & \hdots &  aA_{2n} + bB_{2n}\\
+	                \vdots & \vdots &  & \vdots\\
+	                aA_{m1} + bB_{m1} & aA_{m2} + bB_{m2} & \hdots & aA_{mn} + bB_{mn}\\
+	                \nonumber
+	            \end{bmatrix}^T\\
+	            &=\begin{bmatrix}
+	                aA_{11} + bB_{11} & aA_{21} + bB_{21} & \hdots & aA_{n1} + bB_{n1}\\
+	                aA_{12} + bB_{12} & aA_{22} + bB_{22} & \hdots &  aA_{n2} + bB_{n2}\\
+	                \vdots & \vdots &  & \vdots\\
+	                aA_{1m} + bB_{1m} & aA_{2m} + bB_{2m} & \hdots & aA_{nm} + bB_{nm}\\
+	                \nonumber
+	            \end{bmatrix}\\
+	            &=\begin{bmatrix}
+	                aA_{11} & aA_{21} & \hdots & aA_{m1}\\
+	                aA_{12} & aA_{22} & \hdots & aA_{m2}\\
+	                \vdots & \vdots &  & \vdots\\
+	                aA_{1n} & aA_{2m} & \hdots & aA_{nm}\\
+	                \nonumber
+	            \end{bmatrix} +
+	            \begin{bmatrix}
+	                bB_{11} & bB_{21} & \hdots & bB_{m1}\\
+	                bB_{12} & bB_{22} & \hdots & bB_{m2}\\
+	                \vdots & \vdots &  & \vdots\\
+	                bB_{1n} & bB_{2n} & \hdots & bB_{nm}\\
+	                \nonumber
+	            \end{bmatrix}\\
+	            &\mathbf{=\;}\mathbf{aA^T + bB^T} \qed
+        \end{align*}
+
+
+    \item [\textbf{8.}] \textit{\underline{Problem} Determine whether the following sets are subspaces of $\mathbb{R}^3$ under the operations of addition and scalar multiplication defined on $\mathbb{R}^3$. Justify your answers.}
+		\begin{itemize}
+            \item[(a)]\textit{$W_1 = \{(a_1, a_2, a_3)\in \mathbb{R}^3: a_1 = 3a_2$ and $a_3 = -a_2\}$}\\[1ex]\boxed{\text{{YES, it is a subspace}}}. Because the variables can be thought of as coordinates in 3D and with the given constraints, give us a line in 3 dimension, which is indeed a subspace of $\mathbb{R}$.
+
+    		\item[(b)] \textit{$W_2 = \{(a_1, a_2, a_3)\in \mathbb{R}^3: a_1=a_3 + 2\}$}\\[1ex]\boxed{\text{YES, it's a subspace}}. Because this is a plane in 3 dimensions, which is a subspace.
+
+    		\item[(c)] \textit{$W_3 = \{(a_1, a_2, a_3)\in \mathbb{R}^3: 2a_1 -7a_2 + a_3 = 0\}$}\\[1ex]\boxed{\text{YES, it's a subspaces}}. Again, this is just a plane in $\mathbb{R}^3$, thus it is a subspace.
+    		\item[(d)] \textit{$W_4 = \{(a_1, a_2, a_3)\in \mathbb{R}^3: a_1 - 4a_2 - a_3 = 0\}$}.\\[1ex]
+    		\boxed{\text{YES. a subspace}} Again this is a plane, so the vectors belonging to this set will form a subspace.
+
+    		\item[(e)] \textit{$W_5 = \{(a_1, a_2, a_3)\in \mathbb{R}^3: a_1 + 2a_2 - 3a_3 = 1\}$}\\[1ex]\boxed{\text{NO, Not a subspace}}. Becuase the zero vector is not in the set.
+
+    		\item[(f)] \textit{$W_6 = \{(a_1, a_2, a_3)\in \mathbb{R}^3: 5a_1^2 -3a2^2 + 6a_3^2 = 0\}$}\\[1ex]\boxed{NO}. This is a cone in 3 dimension, so you could have two vectors along the side that, for example $\nwarrow$ and $\nearrow$ that sums to $\uparrow$, but $\vec{v} = (\uparrow) \notin W_6$
+    	\end{itemize}
+
+    \item [\textbf{12.}]\textit{\underline{Problem:} An $m \times n \text{ matrix } A$ is called upper triangular if all entries lying below the diagonal entries are zero, that is, if $A_{ij} = 0$ whenever $i > j$. Prove that the upper triangular matrices form a subspace of $M_{m \times n}(F)$.}\\[2ex]\textit{\underline{Solution:}}\\
+    	Let's denote the subset of upper triangular matrices in $M_{m\times n}$ as $M_{UT}$. we know that $\vec 0 \in M_{UT}$ since the matrix with all zeroes is upper triangular. Let $A$ and $B$ be matrices in $M_{UT}$, $A + B$ is also guranteed to be upper triangular, becuase $0_\mathbb{F} + 0_\mathbb{F} = 0_\mathbb{F}$ and thus in $M_{UT}$ as well. Scalar multiplication holds as well because any $c \in \mathbb{F}$ times $0_\mathbb{F} = 0_\mathbb{F}$. And the axiomss for the operations hold as well because we are dealing with a subset of an already proven Vector Space. \qed
+
+    \item [\textbf{19.}]\textit{\underline{Problem:} Let $W_1$ and $W_2$ be subspaces of a vector space \textbf{V} and $w_1, w_2, ... , w_n$ are in $W$. Prove that $W_1 \cup W_2$ is a subspace of $V$ i.f.f $W_1 \subseteq W_2 \text{ or } W_2 \subseteq W_1$ }\\[2ex]\textit{\underline{Solution:}}\\
+    	We will first proove the back direction, that is: $W_1 \subseteq W_2 \text{ or } W_2 \subseteq W_1 \implies W_1 \cup W_2$ is a subspace of \textbf{V}. There are two cases: if $W_1 \subseteq W_2$, then $W_1 \cup W_2 = W_2$  or if $W_2 \subseteq W_1$, in which case $W_1 \cup W_2 = W_1$ and we are given that $W_1$ and $W_2 $are subspaces, so we're done.\qed\\[2ex]
+    	\hspace*{20pt}To complete the whole proof, we now just have to proove that $W_1 \cup W_2$ is a subspace of \textbf{V} $\implies W_1 \subseteq W_2 \text{ or } W_2 \subseteq W_1$. For contradiction, assume that the latter condition does not hold, that means that there must exist some element $\vec w \in W_1$ and some element $\vec w\prime$ such that $\vec w \notin W_2 \;\&\; \vec w\prime \notin W_1$. Under the addition property we know that $(\vec w + \vec w\prime) \in W_1 \cup W_2$. Which means $(\vec w + \vec w\prime) \text{ either in } W_1 \text{ or } W_2 \text{ or both}$. But $\vec w + \vec w\prime \notin W_1$, because that would imply $\vec w\prime \in W_1$ by the closure property, and similarly $\vec w + \vec w\prime \notin W_2$ by the same reasoning. CONTRADICTION! Our initial assumption must have been incorrect $\therefore$\; $W_1 \subseteq W_2 \text{ or } W_2 \subseteq W_1$ must hold, thus completing the proof. \qed
+
+
+    
+    \item [\textbf{25.}]\textit{\underline{Problem:} Let $W_1$ denote the set of all polynomials $f(x) \in P(\mathbb{F})$ such that $f(x)$ only consists of terms with even degree on the $x$ term. And let $W_2$ denote the set of all polynomials $g(x) \in P(\mathbb{F})$ such that $g(x)$ only consists of terms with odd degree on the $x$ term. Proove that $P(\mathbb{F}) = W_1 \bigoplus W_2$}\\[2ex]\textit{\underline{Solution:}}\\
+    	We have to show that \textbf{(1)} $W_1 \cap W_2 = \{0\}$ and that \textbf{(2)} $W_1 + W_2 = P(\mathbb{F})$.
+		\begin{itemize}
+			\item[\textbf{(1)}]
+    	    	A polynomial that satisfies the properties of both $W_1 \text{ and } W_2$ has coefficients on both even and odd degree terms equal to 0. This means that the only polynomial that satisfies both conditions is the 0 polynomial, thus $W_1 \cap W_2 = \{0\}$\qed
+    	    \item[\textbf{(2)}] Any $f(x) \in W_1$ can be written as: $a_0x^0 + a_2x^2 + a_4x^4 + ... + a_{2k}x^{2k}$ and likewise any $g(x) \in W_2$ can be written as : $b_1x^1 + b_3x^3 + b_5x^5 + ... + b_{2k + 1}x^{2k + 1}$. And we know that any polynomial $h(x) \in P(\mathbb{F})$ can be written as: $c_0x^0 + c_1x^1 + c_2x^2 + c_3x^3 + c_4x^4 + ... + c_{n}x^n$. So for the arbitrary polynomial, we just need to set every $a_i = c_i$, if $i$ is even  and every $b_i = c_i$, if $i$ is odd, and we get that $f(x) + g(x) = h(x)$ \qed
+    	\end{itemize}    	
+    \item [\textbf{29.}]\textit{\underline{Problem:} Let F be a field that is not of characteristic 2. Define: $$W_1 = \{A\in M_{n\times n}(\mathbb{F}): A_{ij} = 0 \text{ whenever } i \leq j \}$$ and $W_2$ to be the set of all symmetric$ n\times n$ matrices with entries from $\mathbb{F}$. Both $W_1$ and $W_2$ are subspaces of $M_{n\times n}(\mathbb{F})$. Prove that $M_{n\times n}(\mathbb{F}) = W_1 \bigoplus W_2.$ }\\[2ex]\textit{\underline{Solution:}}\\
+    	Again, we must show that \textbf{(1)} $W_1 \cap W_2 = \{0\}$ and that \textbf{(2)} $W_1 + W_2 = P(\mathbb{F})$.
+		\begin{itemize}
+			\item[\textbf{(1)}]
+    	    	A polynomial that satisfies the properties of both $W_1 \text{ and } W_2$ must be the zero matrix because a lower triangular mtrix which is symmetric will neccesarily mean that every element is 0 obviously.
+    	    \item[\textbf{(2)}] For any matrix $A \in M_{n\times n}$ we can construct $B \in W_1$ and $D \in W_2$ such that $A = B + D$ like so. $\forall i,j : i \geq j$ set $D_{ij} := A_{ij}$. This also defines the lower half of matrix $D$ by symmetry. Now, $\forall i,j : i < j$ set $B_{ij} := A_{ij - }D_{ij}$ and this completely defines matrix $D\qed$
+	    \end{itemize}
 \end{itemize}
 
 \end{document}
